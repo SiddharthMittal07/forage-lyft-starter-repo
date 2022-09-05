@@ -1,4 +1,3 @@
-from abc import ABC, abstractmethod
 from datetime import date
 
 from car import Car
@@ -10,7 +9,7 @@ from engines.capulet_engine import CapuletEngine
 from engines.sternman_engine import SternmanEngine
 from engines.willoughby_engine import WilloughbyEngine
 
-class CarFactory(ABC):
+class CarFactory:
 
     def create_calliope(current_date: date, last_service_date: date, current_mileage: int, last_service_mileage: int) -> Car:
         battery = SpindlerBattery(last_service_date=last_service_date, current_service_date=current_date)
